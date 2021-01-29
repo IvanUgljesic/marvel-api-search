@@ -1,9 +1,7 @@
 import md5 from 'md5';
 
 export const fetchCharacters = (input, page) => dispatch => {    
-    //ivanug764201351
-    // public api key c6ed097053bea0c843c9339f78f9580b
-    // private api key 09c8015945af43bbaec0d0a9cc5892f3a5f2e6b0
+    
     let ts = Date.now();
     let myPrivate = process.env.REACT_APP_MARVEL_PRIVATE_API_KEY;
     let myPublic = process.env.REACT_APP_MARVEL_PUBLIC_API_KEY;
