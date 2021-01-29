@@ -1,38 +1,124 @@
 .App {
+  max-width: 1280px;
+  margin: 0 auto;
   text-align: center;
+  background-color: #000;
+  padding: 0 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  color:#f9b916;
+  font-family: 'Permanent Marker', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.search-info {
+  width: 100%;
+  color:#f9b916;
+  font-family: 'Permanent Marker', sans-serif;
   min-height: 100vh;
+}
+
+.search-box {
+  align-items: center;
+  min-height: 5vh;
+}
+
+.search-results {
+  align-items: center;
+  align-content: center;
+  min-height: 50vh;
+  width: 100%;
+  margin-bottom: 3vh;
+}
+
+.input-field {
+  min-width: 30%;
+  padding: .5em;
+  border-radius: 5px;
+}
+
+.Card {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 30px #00212d;
+  filter: brightness(1) saturate(90%);
+  transition: transform 0.6s, box-shadow 0.6s, filter 0.4s;
+}
+
+.Card:hover {
+  box-shadow: 1px 1px 40px #f9b916;
+  transform: scale(1.02);
+  filter: brightness(1.2) saturate(110%);
+  transition: transform 0.2s, box-shadow 0.2s;
+  
+}
+
+.Card-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+  background-color:rgb(0,0,0); /* fallback for IE 8 and below */
+  background-color:rgba(0,0,0,0.3);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.card-top {
+  min-height: 15%;
+  padding: 0 15px 15px;
+  font-size: 0.6rem;
+  color:rgb(255,255,255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-bot {
+  min-height: 15%;
+  font-size: 0.6rem;
+  align-self: flex-end;
+  bottom: 0;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem;
+  margin-bottom: 5vh;
+}
+
+@media only screen and (min-width: 601px) {
+  .Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (min-width: 961px) {
+  .Grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 1.5rem;
   }
+}
+
+.bookmark-btn-plus {
+  height: 4vh;
+  background-color: transparent;
+  margin-right: 1vw;
+  color: #FFF;
+}
+
+.bookmark-btn-check {
+  height: 4vh;
+  background-color: transparent;
+  margin-right: 1vw;
+  color: #f9b916;
+}
+
+.btn-icon {
+  color: #f9b916;
 }
